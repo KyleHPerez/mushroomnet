@@ -8,3 +8,6 @@ The code here was written by myself (Kyle Hunter Perez) on 8 June 2025 as an exp
 
 NEXT STEPS
 The next phase of this project will be containerizing the flask_app.py API to run platform-independently on Docker. From there, I plan on hosting the dockerized api on a cloud provider (Heroku or AWS ECS) and connecting it with a React-based front-end.
+
+LINKS
+Source for mushroom dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/mushroom/agaricus-lepiota.data
