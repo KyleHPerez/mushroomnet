@@ -6,6 +6,10 @@ ATTENTION! This API is for research purposes only and is NOT to be used for food
 GENERAL DESCRIPTION
 The code here was written by myself (Kyle Hunter Perez) on 8 June 2025 as an experiment in learning neural network (NN) machine learning (ML) / artificial intelligence (AI) with Python. I used ChatGPT (version 4o) to first prepare a basic understanding of relevant topics in Python and the math underpinning those operations. I then directed and supervised ChatGPT 4o to incrementally build code in line with my vision for a simple NN model trained on high-fidelity, under-utilizied data (here, the data set of Agraricus lepiota measurements from UCI.edu) implemented with PyTorch, scikit-learn, pandas, and numpy. I directed code adjustments until a fully functional and deployable API running on Flask and reachable with curl was complete. In the process, I gained hands-on experience working with Python for NN ML/AI, using conventional libraries in that field, deploying the product service, and familiarity with how the code works and the mathematics that run under-the-hood.
 
+CLOUD SERVICE
+Mushroomnet is now cloud-hosted via Fly.io at https://mushroomnet.fly.dev/. See below (Docker section, point 6) for a sample curl http request to send to the API.
+
+DOCKER
 This repository contains support files for running mushroomnet as a containerized API with Docker.
 To run mushroomnet inside a Docker container:
 1. (If you haven't already) download and install Docker https://docs.docker.com/desktop/setup/install/mac-install/
@@ -23,8 +27,7 @@ And remember, mushroomnet is only for research/entertainment purposes. DO NOT us
 
 
 NEXT STEPS
-Hosting the dockerized api on a cloud provider (Heroku or AWS ECS).
-Build React front-end for cloud-hosted mushroomnet API container.
+Build React front-end for https://mushroomnet.fly.dev/.
 
 LINKS
 Source for mushroom dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/mushroom/agaricus-lepiota.data
