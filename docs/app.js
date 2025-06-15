@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+const { useState } = React;
 
 const featureMap = {
   cap_shape: {
