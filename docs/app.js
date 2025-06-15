@@ -24,7 +24,7 @@ const featureMap = {
   cap_color: {
     label: "cap-color",
     options: {
-      n: "Brown",
+      // n: "Brown",
       b: "Buff",
       c: "Cinnamon",
       g: "Gray",
@@ -84,7 +84,7 @@ const featureMap = {
     label: "gill-color",
     options: {
       k: "Black",
-      n: "Brown",
+      // n: "Brown",
       b: "Buff",
       h: "Chocolate",
       g: "Gray",
@@ -136,7 +136,7 @@ const featureMap = {
   stalk_color_above_ring: {
     label: "stalk-color-above-ring",
     options: {
-      n: "Brown",
+      // n: "Brown",
       b: "Buff",
       g: "Gray",
       o: "Orange",
@@ -149,7 +149,7 @@ const featureMap = {
   stalk_color_below_ring: {
     label: "stalk-color-below-ring",
     options: {
-      n: "Brown",
+      // n: "Brown",
       b: "Buff",
       g: "Gray",
       o: "Orange",
@@ -169,7 +169,7 @@ const featureMap = {
   veil_color: {
     label: "veil-color",
     options: {
-      n: "Brown",
+      // n: "Brown",
       o: "Orange",
       y: "Yellow",
     },
@@ -185,9 +185,9 @@ const featureMap = {
   ring_type: {
     label: "ring-type",
     options: {
-      c: "Cobwebby",
+      // c: "Cobwebby",
       e: "Evanescent",
-      f: "Flaring",
+      // f: "Flaring",
       l: "Large",
       n: "None",
       p: "Pendant",
@@ -199,7 +199,7 @@ const featureMap = {
     label: "spore-print-color",
     options: {
       k: "Black",
-      n: "Brown",
+      // n: "Brown",
       b: "Buff",
       h: "Chocolate",
       r: "Green",
