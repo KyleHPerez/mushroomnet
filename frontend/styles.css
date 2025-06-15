@@ -1,0 +1,10 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+select, button {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
