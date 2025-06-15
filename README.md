@@ -6,6 +6,12 @@ ATTENTION! This API is for research purposes only and is NOT to be used for food
 GENERAL DESCRIPTION
 The code here was written by myself (Kyle Hunter Perez) on 8 June 2025 as an experiment in learning neural network (NN) machine learning (ML) / artificial intelligence (AI) with Python. I used ChatGPT (version 4o) to first prepare a basic understanding of relevant topics in Python and the math underpinning those operations. I then directed and supervised ChatGPT 4o to incrementally build code in line with my vision for a simple NN model trained on high-fidelity, under-utilizied data (here, the data set of Agraricus lepiota measurements from UCI.edu) implemented with PyTorch, scikit-learn, pandas, and numpy. I directed code adjustments until a fully functional and deployable API running on Flask and reachable with curl was complete. In the process, I gained hands-on experience working with Python for NN ML/AI, using conventional libraries in that field, deploying the product service, and familiarity with how the code works and the mathematics that run under-the-hood.
 
+WEBSITE
+Use mushroomnet with a basic web UI at https://kylehperez.github.io/mushroomnet/
+Select values for each of the features and press 'submit' to get a prediction for a sample matching that data.
+There are some feature values that did not appear in the dataset, so for those few, the model will not recognize them and will not return a prediction.
+I am working on identifying which values those are and removing them from the dropdown menu to avoid confusion.
+
 CLOUD SERVICE
 Mushroomnet is now cloud-hosted via Fly.io at https://mushroomnet.fly.dev/. See below (Docker section, point 6) for a sample curl http request to send to the API.
 
@@ -22,12 +28,15 @@ curl -X POST http://127.0.0.1:8000/predict \
      -H "Content-Type: application/json" \
      -d '{"features": {"cap-shape": "x", "cap-surface": "s", "cap-color": "n", "bruises": "t", "odor": "p", "gill-attachment": "f", "gill-spacing": "c", "gill-size": "n", "gill-color": "k", "stalk-shape": "e", "stalk-root": "e", "stalk-surface-above-ring": "s", "stalk-surface-below-ring": "s", "stalk-color-above-ring": "w", "stalk-color-below-ring": "w", "veil-type": "p", "veil-color": "w", "ring-number": "o", "ring-type": "p", "spore-print-color": "k", "population": "s", "habitat": "u"}}'
 
-Enjoy!
+Have fun!
 And remember, mushroomnet is only for research/entertainment purposes. DO NOT use mushroomnet for food-safety or medical advice.
 
 
 NEXT STEPS
-Build React front-end for https://mushroomnet.fly.dev/.
+Identify feature values that did not appear in the data set (and which the model does not recognize).
+Add confidence reporting to the web UI.
+Style the web UI.
 
 LINKS
 Source for mushroom dataset: https://archive.ics.uci.edu/ml/machine-learning-databases/mushroom/agaricus-lepiota.data
+Website interface for mushroomnet https://kylehperez.github.io/mushroomnet/
