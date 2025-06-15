@@ -171,6 +171,7 @@ const featureMap = {
     options: {
       // n: "Brown",
       o: "Orange",
+      w: "White",
       y: "Yellow",
     },
   },
