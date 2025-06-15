@@ -248,6 +248,8 @@ const MushroomForm = () => {
 
   const isFormComplete = Object.values(formData).every((v) => v !== null);
 
+  const snakeToHyphen = (str) => str.replace(/_/g, "-");
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isFormComplete) {
@@ -269,7 +271,6 @@ const MushroomForm = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ features: formattedData })
       });
-      console.log({ features: formattedData });
       const data = await response.json();
       setPrediction(data.prediction);
     } catch (err) {
@@ -308,6 +309,6 @@ const MushroomForm = () => {
   );
 };
 
-// 👇 render manually into the root div
+// render manually into the root div
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<MushroomForm />);
