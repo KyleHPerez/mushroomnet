@@ -259,7 +259,7 @@ const MushroomForm = () => {
       const response = await fetch("https://mushroomnet.fly.dev/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ features: formData })
       });
       const data = await response.json();
       setPrediction(data.prediction);
