@@ -248,6 +248,10 @@ const MushroomForm = () => {
 
   const isFormComplete = Object.values(formData).every((v) => v !== null);
 
+  const snakeToHyphen = (str) => str.replace(/_/g, "-");
+
+  const formattedData = {};
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isFormComplete) {
@@ -256,12 +260,16 @@ const MushroomForm = () => {
     }
 
     try {
+      for (const key in formData) {
+        formattedData[snakeToHyphen(key)] = formData[key];
+      }
+      
       const response = await fetch("https://mushroomnet.fly.dev/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ features: formData })
+        body: JSON.stringify({ features: formattedData })
       });
-      console.log(formData);
+      console.log(features: formattedData);
       const data = await response.json();
       setPrediction(data.prediction);
     } catch (err) {
