@@ -299,4 +299,6 @@ const MushroomForm = () => {
   );
 };
 
-export default MushroomForm;
+// 👇 render manually into the root div
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<MushroomForm />);
