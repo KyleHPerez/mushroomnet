@@ -261,6 +261,7 @@ const MushroomForm = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ features: formData })
       });
+      console.log(formData);
       const data = await response.json();
       setPrediction(data.prediction);
     } catch (err) {
